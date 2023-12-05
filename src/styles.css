@@ -2,3 +2,7 @@
 :root{
     color-scheme: light dark;
 }
+
+body {
+    text-align: center;
+}

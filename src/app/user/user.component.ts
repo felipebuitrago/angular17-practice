@@ -9,5 +9,9 @@ import { Component } from '@angular/core';
 })
 export class UserComponent {
   userName = 'Docky';
-  isLogged = false;
+  isLoggedIn = true;
+
+  greet(){
+    alert(`Greetings, ${this.userName}.`)
+  }
 }

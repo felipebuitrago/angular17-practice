@@ -1,9 +1,19 @@
 
-@if (isLogged) {
-
-    <p>Welcome, {{userName}}!</p>
-}
-@else {
+<section>
+    @if (isLoggedIn) {
     
-    <p>Please Log in.</p>
-}
+        <p>Welcome, {{userName}}!</p>
+        <img 
+            (click)='greet()'
+            src="https://github.com/felipebuitrago.png" 
+            alt="User Profile Photo"
+        >
+        <br>
+        <button (click)='isLoggedIn = false'>Log out</button>
+    }
+    @else {
+        
+        <p>Please Log in.</p>
+        <button (click)='isLoggedIn = true'>Log in</button>
+    }
+</section>
