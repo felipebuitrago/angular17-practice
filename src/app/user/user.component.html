@@ -1,1 +1,9 @@
-<p>user works!</p>
+
+@if (isLogged) {
+
+    <p>Welcome, {{userName}}!</p>
+}
+@else {
+    
+    <p>Please Log in.</p>
+}
