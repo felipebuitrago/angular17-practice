@@ -10,6 +10,16 @@
         >
         <br>
         <button (click)='isLoggedIn = false'>Log out</button>
+
+        <app-games 
+            userName={{userName}}
+            (addFavoriteEvent)="getFavorite($event)"
+        >
+        </app-games>
+
+        @if (favGame !== '') {
+            <p>Your favorite game is: {{favGame}}</p>
+        }
     }
     @else {
         
